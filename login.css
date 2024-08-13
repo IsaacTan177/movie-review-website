@@ -1,0 +1,77 @@
+h1{text-align: center;
+    position: relative;
+        top: 50px;
+        font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: #a7caec ;
+    color: black;
+    padding: 1.2rem;
+}
+
+.navbarcontainer {
+    display: flex;
+    justify-content: space-between; /* spaces out the logo and login/signup */
+    align-items: center; /* alligns items at center */
+    width: 100%;
+    position:relative; 
+}
+
+.navbarlogo {
+    flex: 1; /* allows logo to use available space */
+    text-align: center; /* alligns items at center within container */ 
+    position:relative;left: 50px
+}
+
+.navbarlogo li, .navbarlogin li {
+    display: inline; 
+}
+
+.navbarlogo a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbarlogin a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbarsearch input[type="search"] {
+    padding: 0.5rem;
+    font-size: 1rem;
+    width: 100%; 
+    max-width: 300px; 
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.button {
+    font-size:medium;
+}
+
+/* centers and adjusts the search bar into correct position */
+.navbarsearch {
+    flex: 1; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    padding: 70px;
+}
+
+.login {
+    padding: 80px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
