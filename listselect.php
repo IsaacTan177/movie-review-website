@@ -22,20 +22,38 @@
 </script>
 </head>
 <body>
-    <?php
-    //clears the session variable
-    session_start();
-    unset($_SESSION["search"]);
-
-    ?>
 <div id="navigation"></div>
 
-    <h1>Tell us what you've been watching recently...</h1>
+    <h1>Which list do you want to add it to</h1>
     <div class="navbarsearch">
-        <form action="output.php" method="POST">
-            <input type="text" name="search" placeholder="Search for movies..." required>
+        <form action="listprocess2.php" method="POST">
+            <input type="text" name="addlist" placeholder="enter list name..." required>
             <input type="submit" value="Search">
         </form>
     </div>
 
+
+<?php 
+session_start();
+$addmovie = $_POST['add'];
+echo $addmovie;
+
+include_once("connection.php");  
+$username = $_SESSION["Username"];
+$sql = "SELECT UserID FROM users WHERE Username LIKE '$username'";  
+$result = $conn->prepare($sql);
+$result->execute();
+$row = $result->fetch(PDO::FETCH_ASSOC);
+$userid = $row['UserID'];
+
+$sql = "SELECT  ListName FROM userlists WHERE UserID = '$userid'";
+$result = $conn->query($sql);
+while($row = $result->fetch(PDO::FETCH_ASSOC)) {
+    $movietitle = $row["ListName"];
+    echo $movietitle;
+    echo("&nbsp"."&nbsp"."&nbsp");
+}
+?>
 </body>
+
+

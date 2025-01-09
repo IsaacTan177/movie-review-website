@@ -22,20 +22,15 @@
 </script>
 </head>
 <body>
-    <?php
-    //clears the session variable
-    session_start();
-    unset($_SESSION["search"]);
-
-    ?>
 <div id="navigation"></div>
 
-    <h1>Tell us what you've been watching recently...</h1>
+    <h1>What movie do you want to add?</h1>
     <div class="navbarsearch">
-        <form action="output.php" method="POST">
-            <input type="text" name="search" placeholder="Search for movies..." required>
-            <input type="submit" value="Search">
+        <form action = "listselect.php" method="POST">
+            <input type="text" name="add" placeholder="search..." required>
+            <input type="submit" value="Add">
         </form>
-    </div>
 
+    </div>
+   
 </body>

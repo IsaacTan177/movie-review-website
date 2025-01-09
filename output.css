@@ -1,0 +1,27 @@
+.container {
+    text-align: right; /* Aligns content to the right */
+}
+
+.reviewlink {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px;
+}
+
+h1{
+    text-align: left;
+    padding-top: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+}
+
+p{
+    padding-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.reviews{
+    font-family: Arial, Helvetica, sans-serif;
+}

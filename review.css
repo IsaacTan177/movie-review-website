@@ -1,0 +1,56 @@
+.container {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the start of the container */
+}
+
+.starrating {
+    display: flex;
+    flex-direction: row-reverse; /* makes the stars increase from left to right */
+    font-size: 2em; 
+    color: grey; 
+    float: left;
+    margin-bottom: 10px;
+}
+
+.starrating input {
+    display: none; /* hides the radio buttons and only shows the */
+}
+
+/* highlights the stars when they are pressed  */
+.starrating input:checked ~ label {
+    color: gold;
+}
+
+/* highlights the stars when cursor hovers over the icon */
+.starrating label:hover,
+.starrating label:hover ~ label {
+    color: gold;
+}
+
+.submitbutton {
+    margin-top: 10px; /* Space above the submit button */
+    float: right;
+    height: 40px;
+    width: 60px;
+}
+
+.large-textbox{
+    width: 100%; /* Full width of the container */
+    height: 100px; /* Adjust height as needed */
+    padding: 10px; /* Padding inside the text box */
+    font-size: 16px; /* Font size inside the text box */
+    font-family: Arial, Helvetica, sans-serif;
+    border: px solid black ;
+}
+
+h1{
+        font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
